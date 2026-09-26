@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyOkane — Privacy Policy</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; background: #FEF9F2; color: #47271B; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; color: #357A2F; }
+  p, li { margin: .4rem 0; }
+  ul { padding-left: 1.25rem; }
+  .meta { color: #52443A; margin-bottom: 1.5rem; }
+  a { color: #357A2F; }
+  code { background: #F0E6D8; padding: 0 .25rem; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+<h1>MyOkane — Privacy Policy</h1>
+<p class="meta">Last updated: 27 September 2026 · App: MyOkane for Android (<code>nz.effortless.myokane</code>) · Publisher: Effortless, New Zealand</p>
+
+<p>MyOkane is a personal receipts app. It keeps your receipts in a Google Sheet that you (or the
+sheet's owner) control, and it includes a small Minesweeper game. The app has <strong>no server of
+its own</strong>: it talks directly to Google services using your Google account. This policy
+explains what data the app handles and where that data goes.</p>
+
+<h2>What the app handles</h2>
+<ul>
+  <li><strong>Your Google account email and name.</strong> The app uses these to sign you in, and
+    to check that the MyOkane spreadsheet has been shared with you. Your email is stored only on
+    your phone, so you don't need to sign in each time. We never receive it.</li>
+  <li><strong>Receipts.</strong> These are the merchant, date, amount, category and notes you enter
+    or scan. They're read from and written to the MyOkane Google Sheet through the Google Sheets
+    API, using your own Google sign-in. A copy is kept on your phone, so the app works offline.</li>
+  <li><strong>Receipt photos (only when you scan).</strong> When you scan a receipt with the camera,
+    or pick a photo, the image is sent to Google's Gemini model (via Google Firebase AI Logic). This
+    is only to read the merchant, date, total and category from it. The app doesn't store the
+    photo. Google processes it under its own terms, and under those terms Google may keep and use
+    the content to improve its services. Please don't scan documents with information you don't
+    want to share with Google.</li>
+  <li><strong>Game scores.</strong> If you get a top-10 time, you can choose to add a name to the
+    leaderboard. Only the name you type, your score and the date are written to the spreadsheet's
+    <code>Leaderboard</code> tab. Everyone the sheet is shared with can see them. Your email is
+    never added.</li>
+  <li><strong>App integrity checks.</strong> The app uses Google Firebase App Check with Google
+    Play Integrity, to confirm that requests come from the genuine app on a real device. Google
+    handles this under its own terms.</li>
+  <li><strong>Settings on your phone.</strong> These include your mute choice, the name you last
+    used, your game progress and your cached receipts. They stay on the device.</li>
+</ul>
+
+<h2>What the app doesn't do</h2>
+<ul>
+  <li>No advertising, no analytics or tracking SDKs, and no selling or renting of data.</li>
+  <li>No data is sent to any server run by Effortless. There isn't one.</li>
+  <li>No location, contacts, microphone or other personal data is collected. The camera is used
+    only when you choose to scan a receipt.</li>
+</ul>
+
+<h2>Sharing</h2>
+<p>Your receipts and leaderboard entries are visible to anyone the spreadsheet is shared with. The
+sheet's owner controls that sharing in Google Sheets. Data goes to Google as described above, for
+Sign-In, Sheets, Gemini via Firebase, and App Check/Play Integrity. It goes to no one else.</p>
+
+<h2>Security</h2>
+<p>All traffic to Google uses HTTPS. The app accesses the spreadsheet only with your own Google
+sign-in and permission, and you can revoke that at any time at
+<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+<h2>Keeping and deleting your data</h2>
+<ul>
+  <li>Receipts and leaderboard rows live in the Google Sheet until someone with edit access deletes
+    them.</li>
+  <li><strong>Sign out</strong> in the app, or uninstall it, to remove everything it has stored on
+    your phone.</li>
+  <li>To remove the app's access to your Google account, revoke it at the link above.</li>
+  <li>To ask for help deleting your data, email us (see below).</li>
+</ul>
+
+<h2>Children</h2>
+<p>MyOkane isn't directed at children under 13, and we don't knowingly collect their data.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we'll update this page and the "Last updated" date above.</p>
+
+<h2>Contact</h2>
+<p>Effortless, New Zealand — <a href="mailto:jt@effortless.nz">jt@effortless.nz</a></p>
+</main>
+</body>
+</html>
