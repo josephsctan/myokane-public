@@ -20,62 +20,86 @@
 <body>
 <main>
 <h1>MyOkane — Privacy Policy</h1>
-<p class="meta">Last updated: 27 September 2026 · App: MyOkane for Android (<code>nz.effortless.myokane</code>) · Publisher: Effortless, New Zealand</p>
+<p class="meta">Last updated: 20 October 2026 · App: MyOkane for Android (<code>nz.effortless.myokane</code>) · Publisher: Effortless, New Zealand</p>
 
-<p>MyOkane is a personal receipts app. It keeps your receipts in a Google Sheet that you (or the
-sheet's owner) control, and it includes a small Minesweeper game. The app has <strong>no server of
-its own</strong>: it talks directly to Google services using your Google account. This policy
-explains what data the app handles and where that data goes.</p>
+<p>MyOkane is a personal and family app. It keeps your receipts in a Google Sheet that you create, or that
+someone shares with you, and it includes a few games (Minesweeper, a points-only dice game and a two-team
+scoreboard). The app has <strong>no server of its own</strong>: it talks directly to Google services using
+your Google account. This policy explains what data the app handles and where that data goes.</p>
 
 <h2>What the app handles</h2>
 <ul>
-  <li><strong>Your Google account email and name.</strong> The app uses these to sign you in, and
-    to check that the MyOkane spreadsheet has been shared with you. Your email is stored only on
-    your phone, so you don't need to sign in each time. We never receive it.</li>
-  <li><strong>Receipts.</strong> These are the merchant, date, amount, category and notes you enter
-    or scan. They're read from and written to the MyOkane Google Sheet through the Google Sheets
-    API, using your own Google sign-in. A copy is kept on your phone, so the app works offline.</li>
-  <li><strong>Receipt photos (only when you scan).</strong> When you scan a receipt with the camera,
-    or pick a photo, the image is sent to Google's Gemini model (via Google Firebase AI Logic). This
-    is only to read the merchant, date, total and category from it. The app doesn't store the
-    photo. Google processes it under its own terms, and under those terms Google may keep and use
-    the content to improve its services. Please don't scan documents with information you don't
-    want to share with Google.</li>
-  <li><strong>Game scores.</strong> If you get a top-10 time, you can choose to add a name to the
-    leaderboard. Only the name you type, your score and the date are written to the spreadsheet's
-    <code>Leaderboard</code> tab. Everyone the sheet is shared with can see them. Your email is
-    never added.</li>
-  <li><strong>App integrity checks.</strong> The app uses Google Firebase App Check with Google
-    Play Integrity, to confirm that requests come from the genuine app on a real device. Google
-    handles this under its own terms.</li>
-  <li><strong>Settings on your phone.</strong> These include your mute choice, the name you last
-    used, your game progress and your cached receipts. They stay on the device.</li>
+  <li><strong>Your Google account email and name.</strong> The app uses these to sign you in. Your email is
+    stored only on your phone, so you don't need to sign in each time. We never receive it.</li>
+  <li><strong>Your Google Sheet, through Google Drive file access.</strong> The app asks for the Google
+    <code>drive.file</code> permission, which only lets it use spreadsheets that it created for you or that you
+    choose yourself in Google's file picker. It cannot see your other Drive files. You can either let the app
+    create a new sheet in your Drive or pick an existing one. The app also asks Google whether you own the
+    chosen sheet (file metadata only), to decide whether to show owner settings.</li>
+  <li><strong>Receipts.</strong> These are the merchant, date, amount, category and notes you enter or scan.
+    They're read from and written to your chosen Google Sheet through the Google Sheets API, using your own
+    Google sign-in. A copy is kept on your phone, so the app works offline.</li>
+  <li><strong>Other tabs in your sheet.</strong> The sheet can also hold an <code>Access</code> tab (the owner
+    lists the email addresses of people who may use each part of the app), a <code>Settings</code> tab and a
+    <code>Leaderboard</code> tab. These live in the sheet, which the owner controls.</li>
+  <li><strong>Receipt photos (only when you scan).</strong> Receipt scanning is not yet available to the
+    general public: for now it is limited to a small set of approved accounts, and we plan to support it for
+    all users in the future. When a user scans a receipt with the camera, or picks a photo, the image is
+    sent to Google's Gemini model (via Google Firebase AI Logic). This is only to read the merchant, date,
+    total and category from it. The app doesn't store the photo. Google processes it under its own terms, and
+    under those terms Google may keep and use the content to improve its services. Please don't scan
+    documents with information you don't want to share with Google.</li>
+  <li><strong>Game scores.</strong> If you get a top-10 time, you can choose to add a name to the leaderboard.
+    Only the name you type, your score and the date are written to the sheet's Leaderboard tab. Everyone the
+    sheet is shared with can see them. Your email is never added. Scoreboard team names and history stay on
+    your phone and the history is not kept after the app closes.</li>
+  <li><strong>App integrity checks.</strong> The app uses Google Firebase App Check with Google Play
+    Integrity, to confirm that requests come from the genuine app on a real device. Google handles this
+    under its own terms.</li>
+  <li><strong>Settings on your phone.</strong> These include your mute choice, the name you last used, your
+    game progress, your last open page and your cached receipts. They stay on the device.</li>
+  <li><strong>Demo mode.</strong> "Try the demo" on the sign-in screen opens the app with made-up sample data.
+    It needs no account, makes no network requests, and stores nothing: everything is discarded when you
+    exit the demo.</li>
 </ul>
 
 <h2>What the app doesn't do</h2>
 <ul>
   <li>No advertising, no analytics or tracking SDKs, and no selling or renting of data.</li>
   <li>No data is sent to any server run by Effortless. There isn't one.</li>
-  <li>No location, contacts, microphone or other personal data is collected. The camera is used
-    only when you choose to scan a receipt.</li>
+  <li>No location, contacts, microphone or other personal data is collected. The camera is used only when you
+    choose to scan a receipt.</li>
+  <li>The app has no payments, and the dice game uses points only; there is no real money.</li>
 </ul>
 
+<h2>Google user data</h2>
+<p>MyOkane's use and transfer to any other app of information received from Google APIs will adhere to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data
+Policy</a>, including the Limited Use requirements. The app uses Google user data only to provide its
+features (sign-in, creating or reading your chosen sheet, and syncing your receipts). It does not use it for
+advertising, does not sell it, and does not allow people to read it except as needed to provide the features
+you ask for (for example, other people the sheet is shared with can see the sheet's contents).</p>
+
 <h2>Sharing</h2>
-<p>Your receipts and leaderboard entries are visible to anyone the spreadsheet is shared with. The
-sheet's owner controls that sharing in Google Sheets. Data goes to Google as described above, for
-Sign-In, Sheets, Gemini via Firebase, and App Check/Play Integrity. It goes to no one else.</p>
+<p>Your receipts, the <code>Access</code> list and leaderboard entries are visible to anyone the spreadsheet is
+shared with. The sheet's owner controls that sharing in Google Sheets. The <code>Access</code> tab controls
+what the app shows each person; it is not a security boundary, so please share the sheet only with people you
+trust. Data goes to Google as described above, for Sign-In, Sheets and Drive file access, Gemini via
+Firebase, and App Check/Play Integrity. It goes to no one else.</p>
 
 <h2>Security</h2>
-<p>All traffic to Google uses HTTPS. The app accesses the spreadsheet only with your own Google
-sign-in and permission, and you can revoke that at any time at
+<p>All traffic to Google uses HTTPS. The app accesses a spreadsheet only with your own Google sign-in and
+permission, and you can revoke that at any time at
 <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
 
 <h2>Keeping and deleting your data</h2>
 <ul>
-  <li>Receipts and leaderboard rows live in the Google Sheet until someone with edit access deletes
-    them.</li>
-  <li><strong>Sign out</strong> in the app, or uninstall it, to remove everything it has stored on
-    your phone.</li>
+  <li>The app has no accounts of its own: you sign in with Google. There is nothing to delete at Effortless
+    because Effortless holds no data.</li>
+  <li>Receipts and leaderboard rows live in your Google Sheet until someone with edit access deletes them. To
+    remove all of your data, delete the sheet (or the rows) in Google Sheets.</li>
+  <li><strong>Sign out</strong> in the app, or uninstall it, to remove everything it has stored on your
+    phone.</li>
   <li>To remove the app's access to your Google account, revoke it at the link above.</li>
   <li>To ask for help deleting your data, email us (see below).</li>
 </ul>
